@@ -15,7 +15,7 @@
     the website habe an admin dashboard where it can manage and add new users , categories and products .<br>
     a home pages that shows all 5 categories with 4 items max . <br>
     login and register pages <br>
-    <h3>Still working in </h3>
+    <h3>Still working on </h3>
         categories pages . <br>
         products pages . <br>
         bills pages .  <br>
