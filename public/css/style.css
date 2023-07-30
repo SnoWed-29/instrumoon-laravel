@@ -1,0 +1,7 @@
+#hero {
+  background-image: url("../images/studioBg.jpg");
+  background-size: cover; /* This will make the image cover the entire div */
+  background-position: center; /* This centers the image within the div */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}/*# sourceMappingURL=style.css.map */
