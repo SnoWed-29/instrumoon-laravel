@@ -12,8 +12,8 @@ export default {
       primary: '#395b64',
       gold: '#c7b88d',
       white: '#eeeeee',
-      opacityColor:'#eeeeee69'
-      
+      opacityColor:'#eeeeee69',
+      error: '#ff3333'
     }
   },
   plugins: [],

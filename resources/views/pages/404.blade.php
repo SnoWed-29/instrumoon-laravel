@@ -1,6 +1,6 @@
 @extends('layouts.app')
-
 @section('content')
+    
 <section id="hero" class="h-1 flex items-center p-24">
     <div class="container w-9/12 mx-auto flex  justify-center">
        <div class="flex flex-col justify-center bg-opacityColor p-10 my-4 rounded-lg border-2 border-gold">
@@ -34,24 +34,10 @@
         </div>
     </div>
 </nav>
-<div class="container mb-4 w-9/12 mx-auto">
-    <h1 class="text-center text-5xl p-4 border-b-[3px] border-gold m-3">Guitars</h1>
-    <div class="flex space-x-3  flex-row">
-        @if($category)
-            @if(count($products) > 0)
-                @foreach ($products as $product)
-                <div class="flex flex-col items-center p-2 w-1/4 shadow-xl">
-                    <img src="{{ asset('storage/' . $product->image_path) }}" width="300px" alt="item">
-                    <h2 class="text-2xl">{{$product->name}}</h2>
-                    <h4 class="text-xl my-2">{{$product->price}}</h4>
-                    <a href="#"class="text-2xl p-3 text-white rounded bg-gold hover:bg-dark" >Buy now</a>
-                </div>
-                @endforeach
-            @else
-            @endif
-        @else
-            <p>Category not found.</p>
-        @endif
-    </div>
+
+<div class="container mx-auto w-9/12 flex justify-center ">
+    <h1 class="text-5xl mt-9 border-b-4 border-gold pb-6">PAGE : <span class="text-error">{{$name}} </span>  NOT FOUND</h1>
 </div>
+
+
 @endsection

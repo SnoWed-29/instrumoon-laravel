@@ -13,12 +13,12 @@
 </section>
 <nav class="p-6 bg-primary shadow-xl">
     <div class="hidden container mx-auto w-9/12 md:flex items-center justify-between">
-        <a href="/home" class="hover:text-white text-gold font-bold">Home </a>
-        <a href="/home" class="hover:text-gold text-white font-bold">Guitars</a>
-        <a href="/home" class="hover:text-gold text-white font-bold">Percussion</a>
-        <a href="/home" class="hover:text-gold text-white font-bold">Pianos</a>
-        <a href="/home" class="hover:text-gold text-white font-bold">Studio</a>
-        <a href="/home" class="hover:text-gold text-white font-bold">Accessoire</a>
+        <a href="/" class="hover:text-white text-gold font-bold">Home </a>
+        <a href="/category/guitars" class="hover:text-gold text-white font-bold">Guitars</a>
+        <a href="/category/percussions" class="hover:text-gold text-white font-bold">Percussion</a>
+        <a href="/category/pianos" class="hover:text-gold text-white font-bold">Pianos</a>
+        <a href="/category/studios" class="hover:text-gold text-white font-bold">Studio</a>
+        <a href="/category/accessories" class="hover:text-gold text-white font-bold">Accessoire</a>
         <a href="#" class="font-bold text-gold text-xl"><i class="fa-solid fa-cart-shopping "></i></a>
     </div>
     <div class="container">
