@@ -16,8 +16,5 @@
     a home pages that shows all 5 categories with 4 items max . <br>
     login and register pages <br>
     <h3>Still working on </h3>
-        categories pages . <br>
-        products pages . <br>
-        bills pages .  <br>
-        shopping cart . <br>
+    job is done !
 </p>

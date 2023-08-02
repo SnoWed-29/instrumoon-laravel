@@ -35,8 +35,9 @@
     </div>
 </nav>
 
-<div class="container mx-auto w-9/12 flex justify-center ">
-    <h1 class="text-5xl mt-9 border-b-4 border-gold pb-6">PAGE : <span class="text-error">{{$name}} </span>  NOT FOUND</h1>
+<div class="container mx-auto w-9/12 flex justify-center flex-col">
+    <h1 class="text-5xl mt-9 border-b-4 border-gold pb-6 text-center"> 404 | Page Not Found </h1>
+    <a href="/" class="text-4xl p-6 text-center mx-auto my-5 rounded-xl text-white bg-gold w-fit hover:text-gold hover:bg-dark"> go Home </a>
 </div>
 
 

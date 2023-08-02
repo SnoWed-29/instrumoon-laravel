@@ -1,6 +1,6 @@
 @extends('layouts.app')
+
 @section('content')
-    
 <section id="hero" class="h-1 flex items-center p-24">
     <div class="container w-9/12 mx-auto flex  justify-center">
        <div class="flex flex-col justify-center bg-opacityColor p-10 my-4 rounded-lg border-2 border-gold">
@@ -34,23 +34,25 @@
         </div>
     </div>
 </nav>
-<section id="product" >
-    <div class="container flex w-9/12 mx-auto mb-0 justify-between shadow-2xl bg-white mt-5" >
-        <div class="flex float-left ">
-            <img src="{{ asset('storage/' . $product->image_path) }}" alt="productImg" width="500" />
+<div class="container mb-4 w-9/12 mx-auto  justify-center">
+    <div class="flex p-6 m-8 border-t-2 shadow-2xl items-center justify-between">
+        <div>
+            <img src="{{ asset('storage/' . $product->image_path) }}" alt="productImg"  width="200px" />
         </div>
-        <div class="flex flex-col items-center float-right w-8/12 ">
-            <h1 class="text-4xl my-6 p-6 font-bold border-b-gold border-b-2">{{$product->name}}</h1>
-            <h1 class="text-3xl my-2 p-2 text-primary font-bold border-b-gold border-b-2">{{$product->price}} DH</h1>
-            <span class="border-b-gold border-b-2 my-4">Free Shipping</span>
-            <p class="p-4">
-                <span class="font-bold text-xl ">Description :</span><br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque odit cupiditate officiis exercitationem recusandae quas obcaecati voluptatibus non maiores facilis similique sit, quae nostrum sint corporis dolorum hic fugit? Esse.</p>{{-- {{strip_tags($product->description)} --}}
-            
-        <a href="/product/{{$product->id}}/bill" class="p-4 px-6 bg-gold font-semibold my-4 text-xl text-white hover:bg-dark">Buy</a>
+        <div class="">
+            <h2 class="text-dark text-2xl uppercase  border-b-2 border-b-gold">{{$product->name}}</h2>
+            <h3>Price (1) : {{$product->price}} DH</h3>
+        </div>
+        <div>
+            <form method="POST" action="/product/{{$product->id}}/bill">
+                @csrf
+                <input type="number" name="quantity" class="bodrer-2 border p-2">
+                <button type="submit" class="bg-gold text-white p-2 hover:text-gold hover:bg-dark">Validate</button>
+            </form>
         </div>
     </div>
-</section>
+</div>
+
 
 <footer class="bg-dark p-4 mt-5">
     <div class="container space-x-4 flex flex-row w-9/12 mx-auto">

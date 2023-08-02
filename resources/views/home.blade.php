@@ -43,7 +43,7 @@
                     <img src="{{ asset('storage/' . $guitar->image_path) }}" width="300px" alt="item">
                     <h2 class="text-2xl">{{$guitar->name}}</h2>
                     <h4 class="text-xl my-2">{{$guitar->price}}</h4>
-                    <a href="#"class="text-2xl p-3 text-white rounded bg-gold hover:bg-dark" >Buy now</a>
+                    <a href="/product/{{$guitar->id}}"class="text-2xl p-3 text-white rounded bg-gold hover:bg-dark" >Buy now</a>
                 </div>
                 @endforeach
         </div>
@@ -54,7 +54,7 @@
                     <img src="{{ asset('storage/' . $percussion->image_path) }}" width="300px" alt="item">
                     <h2 class="text-2xl">{{$percussion->name}}</h2>
                     <h4 class="text-xl my-2">{{$percussion->price}}</h4>
-                    <a href="#"class="text-2xl p-3 text-white rounded bg-gold hover:bg-dark" >Buy now</a>
+                    <a href="/product/{{$percussion->id}}"class="text-2xl p-3 text-white rounded bg-gold hover:bg-dark" >Buy now</a>
                 </div>
                 @endforeach
         </div>
@@ -65,7 +65,7 @@
                     <img src="{{ asset('storage/' . $piano->image_path) }}" width="300px" alt="item">
                     <h2 class="text-2xl">{{$piano->name}}</h2>
                     <h4 class="text-xl my-2">{{$piano->price}}</h4>
-                    <a href="#"class="text-2xl p-3 text-white rounded bg-gold hover:bg-dark" >Buy now</a>
+                    <a href="/product/{{$piano->id}}" class="text-2xl p-3 text-white rounded bg-gold hover:bg-dark" >Buy now</a>
                 </div>
                 @endforeach
         </div>
@@ -76,7 +76,7 @@
                     <img src="{{ asset('storage/' . $studio->image_path) }}" width="300px" alt="item">
                     <h2 class="text-2xl">{{$studio->name}}</h2>
                     <h4 class="text-xl my-2">{{$studio->price}}</h4>
-                    <a href="#"class="text-2xl p-3 text-white rounded bg-gold hover:bg-dark" >Buy now</a>
+                    <a href="/product/{{$studio->id}}"class="text-2xl p-3 text-white rounded bg-gold hover:bg-dark" >Buy now</a>
                 </div>
                 @endforeach
         </div>
@@ -87,7 +87,7 @@
                     <img src="{{ asset('storage/' . $accessoire->image_path) }}" width="300px" alt="item">
                     <h2 class="text-2xl">{{$accessoire->name}}</h2>
                     <h4 class="text-xl my-2">{{$accessoire->price}}</h4>
-                    <a href="#"class="text-2xl p-3 text-white rounded bg-gold hover:bg-dark" >Buy now</a>
+                    <a href="/product/{{$accessoire->id}}"class="text-2xl p-3 text-white rounded bg-gold hover:bg-dark" >Buy now</a>
                 </div>
                 @endforeach
         </div>

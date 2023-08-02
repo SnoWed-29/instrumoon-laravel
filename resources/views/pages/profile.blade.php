@@ -34,24 +34,32 @@
         </div>
     </div>
 </nav>
-<div class="container mb-4 w-9/12 mx-auto">
-    <h1 class="text-center text-5xl p-4 border-b-[3px] border-gold m-3">Guitars</h1>
-    <div class="flex space-x-3  flex-row">
-        @if($category)
-            @if(count($products) > 0)
-                @foreach ($products as $product)
-                <div class="flex flex-col items-center p-2 w-1/4 shadow-xl">
-                    <img src="{{ asset('storage/' . $product->image_path) }}" width="300px" alt="item">
-                    <h2 class="text-2xl">{{$product->name}}</h2>
-                    <h4 class="text-xl my-2">{{$product->price}}</h4>
-                    <a href="/product/{{$product->id}}"class="text-2xl p-3 text-white rounded bg-gold hover:bg-dark" >Buy now</a>
-                </div>
-                @endforeach
-            @else
-            @endif
-        @else
-            <p>Category not found.</p>
+<div class="container mb-4 w-9/12 mx-auto h-5/6  p-6 my-6 justify-center">
+    <div class="flex shadow-xl float-left w-1/3 p-2 h-screen flex-col">
+        <h1 class="text-2xl text-center pb-4 border-b-gold border-b-2 my-2 uppercase">{{$user->name}} </h1>
+        <h3 class="text-xl my-5">Email : <span class="text-primary">{{$user->email}}</span>  </h3>
+        <h3 class="text-xl my-5">Joined at :  <span class="text-primary">{{$user->created_at}}</span> </h3>
+    </div>
+    <div class="flex shadow-xl float-right p-2 h-fit w-1/3  flex-col">
+        <h1 class="text-2xl text-center pb-4 border-b-gold border-b-2 my-2 uppercase">Bills</h1>
+        @if($bills->isEmpty())
+            <h1 class="text-xl">No bills available.</h1>
         @endif
+        
+
+        @foreach($bills as $index => $bill)
+        <div>
+            <h3 class="text-xl my-3">Bill id : {{$bill->id}}</h3>
+            <h3 class="text-xl my-3">product : {{$products[$index]->name}}</h3>
+            <h3 class="text-xl my-3">quantity : {{$bill->quantity}} </h3>
+            <h3 class="text-xl my-3 ">Product Price : {{$bill->total_price / $bill->quantity}} DH </h3>
+            <h3 class="text-xl my-3 pb-6 border-b-2 border-b-gold">total price: {{$bill->total_price}}DH </h3>
+        </div>
+        @endforeach
+        
     </div>
 </div>
+
+
+
 @endsection
